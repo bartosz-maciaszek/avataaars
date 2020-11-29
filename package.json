@@ -17,5 +17,27 @@
   },
   "dependencies": {
     "axios": "^0.21.0"
-  }
+  },
+  "name": "@ferryty/avataaars",
+  "version": "0.0.1",
+  "description": "Avataaars client",
+  "main": "src/index.ts",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bartosz-maciaszek/avataaars.git"
+  },
+  "keywords": [
+    "avataaars",
+    "avatar",
+    "random",
+    "placeholder",
+    "user",
+    "image"
+  ],
+  "author": "Bartosz Maciaszek",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bartosz-maciaszek/avataaars/issues"
+  },
+  "homepage": "https://github.com/bartosz-maciaszek/avataaars#readme"
 }

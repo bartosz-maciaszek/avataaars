@@ -1,8 +1,9 @@
 {
   "name": "@ferryty/avataaars",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Avataaars client",
-  "main": "src/index.ts",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/bartosz-maciaszek/avataaars.git"
@@ -23,8 +24,17 @@
   "homepage": "https://github.com/bartosz-maciaszek/avataaars#readme",
   "private": false,
   "scripts": {
-    "test": "jest"
+    "build": "tsc",
+    "test": "jest",
+    "format": "prettier --write \"src/**/*.ts\"",
+    "lint": "eslint",
+    "prepare" : "npm run build",
+    "prepublishOnly" : "npm test && npm run lint",
+    "preversion" : "npm run lint",
+    "version" : "npm run format && git add -A src",
+    "postversion" : "git push && git push --tags"
   },
+  "files": ["dist/**/*"],
   "dependencies": {
     "axios": "^0.21.0"
   },
@@ -38,6 +48,7 @@
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^4.2.1",
     "jest": "^26.6.3",
+    "prettier": "^2.2.1",
     "ts-jest": "^26.4.4",
     "typescript": "^4.1.2"
   }

@@ -21,9 +21,7 @@
     "url": "https://github.com/bartosz-maciaszek/avataaars/issues"
   },
   "homepage": "https://github.com/bartosz-maciaszek/avataaars#readme",
-  "publishConfig": {
-    "access": "public"
-  },
+  "private": false,
   "scripts": {
     "test": "jest"
   },
